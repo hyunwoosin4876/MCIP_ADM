@@ -1,0 +1,17 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3g.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd" version="2.0">
+
+	<tlib-version>1.0</tlib-version>
+	<uri>functions.tld</uri>
+	<name>cfn</name>
+	<short-name>sUtil</short-name>
+
+	<!-- 특수 문자 치환 함수 -->
+	<function>
+		<name>doTansSChar</name>
+		<function-class>mcip.framework.util.StringUtil</function-class>
+		<function-signature>java.lang.String stringTansSChar(java.lang.String)</function-signature>
+		<example>
+            ${cfn:stringTansSChar(str)}
+       </example>
+	</function>
+</taglib>

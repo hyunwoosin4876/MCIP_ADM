@@ -1,0 +1,61 @@
+1590977632876	Move compilation units
+1590977643264	Rename type 'CommonCodeDTO'
+1590977670186	Rename type 'CommonCodeVO'
+1590977721232	Delete elements
+1590977734006	Delete elements
+1590977746761	Move compilation units
+1590977756994	Rename type 'FileDTO'
+1590977766380	Rename type 'FileVO'
+1590977772292	Delete element
+1590977826971	Delete elements
+1590977872429	Move compilation units
+1590977955540	Rename type 'LoginLogDTO'
+1590977963475	Rename type 'LoginLogVO'
+1590977972746	Rename type 'MenuLogDTO'
+1590977980250	Rename type 'MenuLogVO'
+1590977987934	Rename type 'MenuStateDTO'
+1590977994850	Rename type 'MenuStateVO'
+1590978002710	Rename type 'MenuStateYearDTO'
+1590978009372	Rename type 'MenuStateYearVO'
+1590978017263	Rename type 'UrlLogDTO'
+1590978024444	Rename type 'UrlLogVO'
+1590978049700	Rename type 'UrlLogStatsDTO'
+1590978056561	Rename type 'UrlLogStatsVO'
+1590978064433	Rename type 'UserLogDTO'
+1590978071672	Rename type 'UserLogVO'
+1590978088562	Rename type 'UserLogStatsDTO'
+1590978096146	Rename type 'UserLogStatsVO'
+1590995804922	Delete elements
+1590995811971	Delete elements
+1590995819004	Delete elements
+1590995826799	Delete elements
+1590996001784	Infer generic type arguments
+1590996484215	Copy compilation unit
+1590996520075	Copy compilation unit
+1590996771331	Delete elements
+1590996806891	Move compilation units
+1590996826524	Rename type 'UrlDTO'
+1590996835334	Rename type 'UrlVO'
+1590996846171	Rename type 'UrlMenuDTO'
+1590996868692	Rename type 'UrlMenuVO'
+1590996877971	Rename type 'UrlStatsDataDTO'
+1590996886686	Rename type 'UrlStatsDataVO'
+1590997271457	Move compilation units
+1590997291906	Delete elements
+1590997314514	Delete element
+1590997356915	Rename type 'IpDTO'
+1590997364018	Rename type 'IpVO'
+1590997412280	Rename type 'OrganDTO'
+1590997437750	Delete element
+1590997454120	Rename type 'OrganVO'
+1590997849249	Rename type 'UserDTO'
+1590997854195	Delete element
+1590997860531	Rename type 'UserVO'
+1590997873014	Delete elements
+1590998010031	Delete element
+1590998014713	Delete element
+1590998276084	Delete elements
+1590998471493	Delete elements
+1590999887472	Delete element
+1590999898565	Delete element
+1591005464690	Rename resource 'ewp'

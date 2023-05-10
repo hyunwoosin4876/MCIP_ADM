@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- 3단 -->
+	<definition name="layouts-tiles" 		template="/WEB-INF/config/layouts/default/layouts-tiles.jsp">
+		<put-attribute name="header"    	value="/WEB-INF/config/layouts/header.jsp" />
+		<put-attribute name="left"   		value="/WEB-INF/config/layouts/default/left.jsp" />
+		<put-attribute name="content"   	value="" />
+		<put-attribute name="footer"    	value="/WEB-INF/config/layouts/footer.jsp" />
+		<put-attribute name="title"    		value="MCIP" />
+		<put-attribute name="stylecss" 		value="/WEB-INF/config/layouts/default/stylecss.jsp"></put-attribute>
+		<put-attribute name="scriptjs" 		value="/WEB-INF/config/layouts/default/js.jsp"></put-attribute>
+	</definition>
+	<definition name="*.tiles" 				extends="layouts-tiles">
+		<put-attribute name="content" 	 	value="/WEB-INF/views/{1}.jsp" />
+	</definition>
+	<definition name="*/*.tiles" 			extends="layouts-tiles">
+		<put-attribute name="content"	   	value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+	<definition name="*/*/*.tiles" 			extends="layouts-tiles">
+		<put-attribute name="content"  		value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+	</definition>
+	
+	<!-- 2단 -->	
+	<definition name="two-tiles" 			template="/WEB-INF/config/layouts/twoLay/layouts-tiles.jsp">
+		<put-attribute name="content"   	value="" />
+		<put-attribute name="header"    	value="/WEB-INF/config/layouts/header.jsp" />
+		<put-attribute name="footer"    	value="/WEB-INF/config/layouts/footer.jsp" />
+		<put-attribute name="stylecss" 		value="/WEB-INF/config/layouts/twoLay/stylecss.jsp" />
+		<put-attribute name="scriptjs" 		value="/WEB-INF/config/layouts/twoLay/js.jsp" />
+	</definition>
+	<definition name="*.t_tiles" 			extends="two-tiles">
+		<put-attribute name="content" 	 	value="/WEB-INF/views/{1}.jsp" />
+	</definition>
+	<definition name="*/*.t_tiles" 			extends="two-tiles">
+		<put-attribute name="content"	   	value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+	<definition name="*/*/*.t_tiles" 		extends="two-tiles">
+		<put-attribute name="content"  		value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+	</definition>
+	
+	<!-- 1단,없음 -->
+	<definition name="no-tiles" 			template="/WEB-INF/config/layouts/noTemplate.jsp">
+		<put-attribute name="title"    		value="MCIP " />
+		<put-attribute name="stylecss" 		value="/WEB-INF/config/layouts/stylecss.jsp"></put-attribute>
+		<put-attribute name="scriptjs" 		value="/WEB-INF/config/layouts/js.jsp"></put-attribute>
+		<put-attribute name="contents"   	value="" />
+		<put-attribute name="footer"   		value="/WEB-INF/config/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="*.jsp" 				extends="no-tiles">
+		<put-attribute name="contents" 		value="/WEB-INF/views/{1}.jsp" />
+	</definition>
+	
+	<definition name="*/*.jsp" 				extends="no-tiles">
+		<put-attribute name="contents"   	value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>	
+	
+	<definition name="*/*/*.jsp" 			extends="no-tiles">
+		<put-attribute name="contents"   	value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+	</definition>
+
+	<!-- 팝업 -->
+	<definition name="popup-tiles" 			template="/WEB-INF/config/layouts/popup-layouts.jsp">
+		<put-attribute name="popupContents" value="" />
+	</definition>
+	
+	<definition name="*.popup" 				extends="popup-tiles">
+		<put-attribute name="popupContents" value="/WEB-INF/views/popUp/{1}.jsp" />
+	</definition>
+	
+	<definition name="*/*.popup" 			extends="popup-tiles">
+		<put-attribute name="popupContents" value="/WEB-INF/views/popUp/{1}/{2}.jsp" />
+	</definition>	
+	
+	<definition name="*/*/*.popup" 			extends="popup-tiles">
+		<put-attribute name="popupContents" value="/WEB-INF/views/popUp/{1}/{2}/{3}.jsp" />
+	</definition>
+	
+	<definition name="/*.blank" template="/WEB-INF/views/{1}.jsp" />
+	<definition name="/*/*.blank" template="/WEB-INF/views/{1}/{2}.jsp" />
+	<definition name="/*/*/*.blank" template="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+</tiles-definitions>

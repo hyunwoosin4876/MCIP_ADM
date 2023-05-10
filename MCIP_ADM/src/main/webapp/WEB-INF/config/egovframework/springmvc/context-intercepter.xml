@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+	<mvc:annotation-driven/>
+	<mvc:interceptors>
+		<!--   Login Check Interceptor -->
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/" />
+			<mvc:exclude-mapping path="/favicon.ico" />
+			<mvc:exclude-mapping path="/resources/favicon.ico" />
+			<!-- <mvc:exclude-mapping path="/loginForm.do" /> -->
+			<mvc:exclude-mapping path="/loginProcAjax.do" />
+			<mvc:exclude-mapping path="/resources/css/**/**/*" />
+			<mvc:exclude-mapping path="/resources/css/**/*" />
+			<mvc:exclude-mapping path="/resources/css/*" />
+			<mvc:exclude-mapping path="/resources/editor/*" />
+			<mvc:exclude-mapping path="/resources/editor/**/*" />
+			<mvc:exclude-mapping path="/resources/editor/**/**/*" />
+			<mvc:exclude-mapping path="/resources/js/*" />
+			<mvc:exclude-mapping path="/resources/js/**/*" />
+			<mvc:exclude-mapping path="/resources/js/**/**/*" />
+			<mvc:exclude-mapping path="/resources/img/*" />
+			<mvc:exclude-mapping path="/resources/img/**/*" />
+			<mvc:exclude-mapping path="/resources/img/**/**/*" />
+			<mvc:exclude-mapping path="/dashBoard/*" />
+			<mvc:exclude-mapping path="/dashBoard/**/*" />
+			<beans:bean id="SessionInterceptor" class="mcip.framework.interceptor.SessionInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+</beans:beans>

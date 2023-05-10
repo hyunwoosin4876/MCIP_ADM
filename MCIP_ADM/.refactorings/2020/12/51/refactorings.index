@@ -1,0 +1,33 @@
+1607835160405	Copy file
+1607835177990	Copy file
+1607835187188	Copy file
+1607835191027	Copy file
+1607835201969	Delete element
+1607835214433	Copy file
+1607835238124	Copy file
+1607835250094	Copy file
+1607836465827	Rename type 'fmsDoorSensorDTO'
+1607836471773	Rename compilation unit 'fmsDoorSensorEntity.java'
+1607836477456	Rename compilation unit 'GmsDoorSensorEntity.java'
+1607836483559	Rename compilation unit 'fmsFireSensorDTO.java'
+1607836489584	Rename compilation unit 'fmsFireSensorEntity.java'
+1607836496118	Rename compilation unit 'fmsThermoHygrostatDTO.java'
+1607836502566	Rename compilation unit 'fmsThermoHygrostatEntity.java'
+1607836508467	Rename compilation unit 'fmsThresholdSettingDTO.java'
+1607836514516	Rename compilation unit 'fmsThresholdSettingEntity.java'
+1607836520644	Rename compilation unit 'fmsTmprtHmsSensorDTO.java'
+1607836526806	Rename compilation unit 'fmsTmprtHmsSensorEntity.java'
+1607836532613	Rename compilation unit 'fmsUpsDTO.java'
+1607836538372	Rename compilation unit 'fmsUpsEntity.java'
+1607837189998	Move compilation units
+1607837240479	Copy compilation units
+1607837247476	Rename type 'PowermeterLineLogDTO'
+1607837254581	Rename type 'PowermeterLineLogEntity'
+1607837263108	Rename type 'PowermeterMainLogDTO'
+1607837269523	Rename type 'PowermeterMainLogEntity'
+1607837276127	Rename type 'PowermeterUnitLogDTO'
+1607837282748	Rename type 'PowermeterUnitLogEntity'
+1607837308616	Delete elements
+1607837583690	Delete elements
+1607837730152	Delete elements
+1607838149876	Delete elements
