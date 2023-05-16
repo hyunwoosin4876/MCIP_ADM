@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/jdbc  http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd
+		http://www.springframework.org/schema/tx	http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="locations">
+			<value>classpath:/egovframework/property/jdbc.properties</value>
+		</property>
+	</bean>
+	
+    <!-- mcip DB -->
+    <bean id="mcipDB" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.Driver}"/>
+        <property name="url" value="${mcip.jdbc.ConnectionURL}" />
+        <property name="username" value="${mcip.jdbc.Username}"/>
+        <property name="password" value="${mcip.jdbc.Password}"/>
+        <property name="validationQuery" value="${mcip.jdbc.defaultQuery}" />
+    </bean>    
+   	<!-- SqlSession setup for MyBatis Database Layer -->
+	<bean id="sqlMcipDBSession" class="mcip.framework.util.RefreshableSqlSessionFactoryBean">
+		<property name="dataSource" ref="mcipDB" />
+		<property name="configLocation" value="classpath:/egovframework/sqlmap/config/sql-mapper-config.xml" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath*:/egovframework/sqlmap/mcip/**/*.xml</value>
+			</list>
+		</property>
+	</bean>
+ 	<bean class="egovframework.rte.psl.dataaccess.mapper.MapperConfigurer">
+		<property name="basePackage" value="mcip.webapps.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sqlMcipDBSession" />
+	</bean>
+	
+	<!-- common DB -->
+    <bean id="commonDB" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.Driver}"/>
+        <property name="url" value="${common.jdbc.ConnectionURL}" />
+        <property name="username" value="${common.jdbc.Username}"/>
+        <property name="password" value="${common.jdbc.Password}"/>
+        <property name="validationQuery" value="${common.jdbc.defaultQuery}" />
+    </bean>    
+   	<!-- SqlSession setup for MyBatis Database Layer -->
+	<bean id="sqlCommonDBSession" class="mcip.framework.util.RefreshableSqlSessionFactoryBean">
+		<property name="dataSource" ref="commonDB" />
+		<property name="configLocation" value="classpath:/egovframework/sqlmap/config/sql-mapper-config.xml" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath*:/egovframework/sqlmap/common/**/*.xml</value>
+			</list>
+		</property>
+	</bean>
+ 	<bean class="egovframework.rte.psl.dataaccess.mapper.MapperConfigurer">
+		<property name="basePackage" value="mcip.webapps.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sqlCommonDBSession" />
+	</bean>
+	
+</beans>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mcip.webapps.dao.board.BoardDAO">
+
+	<sql id="boardWhere">
+		FROM BOARD A		
+	</sql>
+	
+	<!-- 전체 갯수 -->
+	<select id="getBoardCnt" parameterType="board" resultType="INT">
+		/*fn : getBoardCnt, wr : 신현우, date: 2023.05.10*/
+		SELECT COUNT(*) AS CNT
+		<include refid="boardWhere" />
+	</select>
+	
+	<!-- 리스트 -->
+	<select id="getBoardList" parameterType="board" resultType="boardDTO">
+		/*fn : getBoardCnt, wr : 신현우, date: 2023.05.10*/
+		SELECT A.BOARD_SEQ AS boardSeq  
+			, A.BOARD_TITLE AS boardTitle 
+			, A.BOARD_CONTENT AS boardContent
+			, A.BOARD_USE_YN AS boardUseYn
+			, A.COM_CODE_SEQ AS comCodeSeq
+			, A.COM_CODE AS comCode
+			, A.REG_ID AS regId
+			, A.REG_DT AS regDt
+			, A.UPD_ID AS updId
+			, A.UPD_DT AS updDt
+		<include refid="boardWhere" />
+	</select>
+	
+	<!-- 상세 -->
+	<select id="getBoardDetail" parameterType="board" resultType="boardDTO">
+		/*fn : getBoardCnt, wr : 신현우, date: 2023.05.10*/
+		SELECT A.BOARD_SEQ AS boardSeq  
+			, A.BOARD_TITLE AS boardTitle 
+			, A.BOARD_CONTENT AS boardContent
+			, A.BOARD_USE_YN AS boardUseYn
+			, A.COM_CODE_SEQ AS comCodeSeq
+			, A.COM_CODE AS comCode
+		FROM BOARD A
+		WHERE A.BOARD_SEQ = ${boardSeq}		
+	</select>
+	
+	<!-- 등록 -->
+	<insert id="insBoard" parameterType="board">
+		/*fn : getBoardCnt, wr : 신현우, date: 2023.05.10*/
+		INSERT INTO BOARD (
+			BOARD_SEQ  
+			, BOARD_TITLE 
+			, BOARD_CONTENT
+			, BOARD_USE_YN
+			, COM_CODE_SEQ
+			, COM_CODE
+			, REG_ID
+			, REG_DT
+		) VALUES (
+			${boardSeq} 
+			, ${boardTitle} 
+			, ${boardContent}
+			, ${boardUseYn}
+			, ${comCodeSeq}
+			, ${comCode}
+			, ${regId}
+			, NOW()
+		)		
+	</insert>
+	
+	<!-- 수정 -->
+	<update id="updBoard" parameterType="board">
+		/*fn : getBoardCnt, wr : 신현우, date: 2023.05.10*/
+		UPDATE BOARD
+		SET	BOARD_TITLE = ${boardTitle} 
+			, BOARD_CONTENT = ${boardContent}
+			, COM_CODE_SEQ = ${comCodeSeq}
+			, COM_CODE = ${comCode}
+			, UPD_ID = ${updId}
+			, UPD_DT = NOW()
+		WHERE BOARD_SEQ = ${boardSeq}
+	</update>
+	
+	<!-- 삭제 -->
+	<update id="updBoardUseYn" parameterType="board">
+		/*fn : getBoardCnt, wr : 신현우, date: 2023.05.10*/
+		UPDATE BOARD
+		SET	BOARD_USE_YN = 'Y'
+		WHERE BOARD_SEQ = ${boardSeq}
+	</update>
+	
+	<!-- 물리적 삭제 -->
+	<delete id="delBoard" parameterType="board">
+		/*fn : getBoardCnt, wr : 신현우, date: 2023.05.10*/
+		DELETE 
+		FROM BOARD A
+		WHERE A.BOARD_SEQ = ${boardSeq}
+	</delete>
+</mapper>
