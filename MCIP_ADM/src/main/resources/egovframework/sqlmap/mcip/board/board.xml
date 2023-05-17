@@ -19,13 +19,7 @@
 		SELECT A.BOARD_SEQ AS boardSeq  
 			, A.BOARD_TITLE AS boardTitle 
 			, A.BOARD_CONTENT AS boardContent
-			, A.BOARD_USE_YN AS boardUseYn
-			, A.COM_CODE_SEQ AS comCodeSeq
-			, A.COM_CODE AS comCode
-			, A.REG_ID AS regId
-			, A.REG_DT AS regDt
-			, A.UPD_ID AS updId
-			, A.UPD_DT AS updDt
+			, A.BOARD_DEL_YN AS boardUseYn
 		<include refid="boardWhere" />
 	</select>
 	
@@ -35,9 +29,7 @@
 		SELECT A.BOARD_SEQ AS boardSeq  
 			, A.BOARD_TITLE AS boardTitle 
 			, A.BOARD_CONTENT AS boardContent
-			, A.BOARD_USE_YN AS boardUseYn
-			, A.COM_CODE_SEQ AS comCodeSeq
-			, A.COM_CODE AS comCode
+			, A.BOARD_DEL_YN AS boardUseYn
 		FROM BOARD A
 		WHERE A.BOARD_SEQ = ${boardSeq}		
 	</select>

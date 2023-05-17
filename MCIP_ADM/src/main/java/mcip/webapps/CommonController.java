@@ -27,4 +27,13 @@ public class CommonController {
 		log.debug("========================== NO URL ==============================");
 		return "/index.jsp";
 	}
+	
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 */
+	@GetMapping("/workList.do")
+	public String workList(HttpSession session, Model model) {
+		log.debug("========================== workList ==============================");
+		return "pub/layout.title";
+	}
 }
