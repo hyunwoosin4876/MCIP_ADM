@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>USG코딩오픈메타캠퍼스통합플랫폼SW시스템</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.theme.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/common.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/content.css" media="all">
+
+	<!-- js -->
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../js/datepicker.js"></script> 
+	<script type="text/javascript" src="../js/commonUI.js"></script>
+
+	<!-- bootstrap -->
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>	
+</head>
+<body>
+
+	<div id="wrap">
+		 <!-- s : header-->
+		 <div id="header" class="sub_header">
+			<div class="inner">
+				<h1><a href="/"></a><img src="../img/logo.png" alt="USG코딩오픈메타캠퍼스통합플랫폼SW시스템"></a></h1>
+				<div class="utility">
+					<div class="user"><span class="name"><i class="fa-solid fa-user"></i>홍길동</span>님</div>
+					<div class="btns">
+						<button type="button">비밀번호변경</button>
+						<button type="button">사용자관리</button>
+						<button type="button">로그아웃</button>
+					</div>
+				</div>
+			</div>
+		</div>  
+		<!-- e : header --> 
+
+		<!-- s : gnb -->
+		<div class="gnb">
+			<ul>
+				<li><a href="#">사이트관리</a></li>
+				<li><a href="#">사용자관리</a></li>
+				<li><a href="#">PCMS관리</a></li>
+				<li><a href="#">EMES 관리</a></li>
+				<li><a href="#">LMS(이동)</a></li>
+				<li><a href="#">LAI(이동)</a></li>
+			</ul>	
+		</div>
+		<!-- e : gnb --> 
+
+		<!-- s : container -->
+		<div id="container" class="sub_container">
+			<div class="inner">
+				<div class="side_area">
+					<div id="lnb">
+						<ul>
+							<li>
+								<a href="#none">코드관리</a>
+								<ul>
+									<li><a href="#none">sub1-1</a></li>
+									<li><a href="#none">sub1-2</a></li>
+									<li><a href="#none">sub1-3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#none">메뉴관리</a>
+								<ul>
+									<li><a href="#none">sub2-1</a></li>
+									<li><a href="#none">sub2-2</a></li>
+									<li><a href="#none">sub2-3</a></li>
+								</ul>
+							</li>
+							<li><a href="#none">팝업관리</a></li>
+							<li><a href="#none">배너관리</a></li>
+							<li><a href="#none">공지사항 관리</a></li>
+							<li><a href="#none">FAQ 관리</a></li>
+							<li><a href="#none">1:1 문의관리</a></li>
+							<li><a href="#none">약관관리</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //side_area -->
+				<div class="content_area">
+					<div class="location">
+						<h3 class="page_title">권한관리</h3>
+						<p class="local"><span class="home">HOME</span><span>사이트관리</span><span class="current">권한관리</span></p>
+					</div>
+					<div class="content">
+					<!-- 내용 : s -->
+
+						<div class="row">
+							<div class="col-5">
+								<div class="bundle">
+									<div class="heading">
+										<h4 class="title">권한 그룹 목록</h4>
+										<div class="controller">
+											<button type="button" class="btn_default btn_mid bg_blue">권한 그룹 추가</button>
+										</div>
+									</div>
+									<div class="tbl_scroll_wrap" style="height:300px;">
+										<table class="tbl_view">
+											<caption>권한 그룹 목록</caption> 						
+											<colgroup>
+												<col>
+												<col style="width:100px">
+												<col style="width:90px">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">권한 그룹명</th>
+													<th scope="col">사용여부</th>
+													<th scope="col">회원</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="text" id="" name="" value="" title="권한 그룹명" class="w100"></td>
+													<td class="tc">
+														<select name="" id="" title="사용여부">
+															<option value="">사용</option>
+															<option value="">사용안함</option>
+														</select>
+													</td>
+													<td class="tc">
+														<button type="button" class="btn_default bg_navy">저장</button>
+													</td>
+												</tr>
+												<tr>
+													<td><input type="text" id="" name="" value="권한 그룹명1" title="권한 그룹명" class="w100"></td>
+													<td class="tc">
+														<select name="" id="" title="사용여부">
+															<option value="">사용</option>
+															<option value="">사용안함</option>
+														</select>
+													</td>
+													<td class="tc">
+														<button type="button" data-toggle="modal" data-target="#modal_manager" class="btn_link">10명</button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //bundle -->
+								<div class="bundle mt10">
+									<div class="heading">
+										<h4 class="title">(선택 권한 그룹명) 사용자 목록</h4>
+										<div class="controller">
+											<button type="button" class="btn_default btn_mid bg_blue">관리자 추가</button>
+										</div>
+									</div>
+									<div class="tbl_scroll_wrap" style="height:300px;">
+										<table class="tbl_view">
+											<caption>(선택 권한 그룹명) 사용자 목록</caption> 						
+											<colgroup>
+												<col style="width:60px">
+												<col>
+												<col style="width:20%">
+												<col style="width:100px">
+												<col style="width:90px">
+												<col style="width:90px">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">순번</th>
+													<th scope="col">소속</th>
+													<th scope="col">id</th>
+													<th scope="col">이름</th>
+													<th scope="col" colspan="2">사용여부</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="text" id="" name="" value="" title="" class="w100"></td>
+													<td><input type="text" id="" name="" value="" title="" class="w100"></td>
+													<td><input type="text" id="" name="" value="" title="" class="w100"></td>
+													<td><input type="text" id="" name="" value="" title="" class="w100"></td>
+													<td class="tc">
+														<select name="" id="" class="w100">
+															<option value="">사용</option>
+															<option value="">사용중지</option>
+														</select>
+													</td>
+													<td class="tc">
+														<button type="button" class="btn_default bg_navy">저장</button>
+													</td>
+												</tr>
+												<tr>
+													<td class="tc">1</td>
+													<td class="tc">운영총괄센터</td>
+													<td class="tc">qwer003</td>
+													<td class="tc">최관리</td>
+													<td class="tc">사용</td>
+													<td class="tc">
+														<button type="button" class="btn_default bg_orange">수정</button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //bundle -->
+							</div>	
+							<!-- //col -->
+							<div class="col-7">
+								<div class="bundle">
+									<div class="heading">
+										<h4 class="title">(선택 권한 그룹명) 권한 상세</h4>
+										<div class="controller">
+											<button type="button" class="btn_default btn_mid bg_blue">권한 설정 저장</button>
+										</div>
+									</div>
+									<div class="tbl_scroll_wrap" style="height:695px;">
+										<table class="tbl_list">
+											<caption>목록</caption> 						
+											<colgroup>
+												<col style="width:60px">
+												<col>
+												<col style="width:80px">
+												<col style="width:300px">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col"></th>
+													<th scope="col">메뉴명</th>
+													<th scope="col">접근권한</th>
+													<th scope="col">세부권한</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<button type="button"><i class="fa-solid fa-plus"></i><span class="blind">더보기</span></button>
+														<button type="button"><i class="fa-solid fa-minus"></i><span class="blind">접기</span></button>
+													</td>
+													<td class="tl"><span class="bold">사이트 관리</span></td>
+													<td><span class="field_check field_check_empty"><label><input type="checkbox" id="" name="" value=""><span class="blind">접근권한</span></label></span></td>
+													<td>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>목록</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>상세</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>입력</span></label></span>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+													<td class="tl">메뉴1</td>
+													<td><span class="field_check field_check_empty"><label><input type="checkbox" id="" name="" value=""><span class="blind">접근권한</span></label></span></td>
+													<td>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>목록</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>상세</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>입력</span></label></span>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+													<td class="tl">메뉴2</td>
+													<td><span class="field_check field_check_empty"><label><input type="checkbox" id="" name="" value=""><span class="blind">접근권한</span></label></span></td>
+													<td>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>목록</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>상세</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>입력</span></label></span>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+													<td class="tl">메뉴3</td>
+													<td><span class="field_check field_check_empty"><label><input type="checkbox" id="" name="" value=""><span class="blind">접근권한</span></label></span></td>
+													<td>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>목록</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>상세</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>입력</span></label></span>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<button type="button"><i class="fa-solid fa-plus"></i><span class="blind">더보기</span></button>
+														<button type="button"><i class="fa-solid fa-minus"></i><span class="blind">접기</span></button>
+													</td>
+													<td class="tl"><span class="bold">기업환경관리</span></td>
+													<td><span class="field_check field_check_empty"><label><input type="checkbox" id="" name="" value=""><span class="blind">접근권한</span></label></span></td>
+													<td>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>목록</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>상세</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>입력</span></label></span>
+													</td>
+												</tr>
+												<tr>
+													<td></td>
+													<td class="tl">메뉴1</td>
+													<td><span class="field_check field_check_empty"><label><input type="checkbox" id="" name="" value=""><span class="blind">접근권한</span></label></span></td>
+													<td>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>목록</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>상세</span></label></span>
+														<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>입력</span></label></span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>	
+							<!-- //col -->
+						</div>	
+						<!-- //row-->
+							
+
+					<!-- 내용 : e -->
+					</div>
+				</div>
+				<!-- //content_area -->
+			</div>	
+		</div>
+		<!-- e : container -->
+
+		<!-- s : footer -->
+		<div id="footer">
+			<div class="inner">
+				<p class="addr">51391 경상남도 창원시 의창구 차룡로48번길 54 기업연구관 1층 TEL 055-294-9949 FAX 055-295-7474</p>
+				<p class="copyright">Copyright 2021 경남지역혁신플랫폼. All rights reserved.</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+	<!-- //wrap -->	
+
+	<!-- 관리자검색팝업 -->
+	<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"  aria-labelledby="modal_manager" id="modal_manager">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">관리자 검색</h4>
+					<button type="button" data-dismiss="modal" class="close"><i class="fas fa-sharp fa-light fa-xmark"></i><span class="blind">닫기</span></button>
+				</div>
+				<!-- Modal body -->
+				<div class="modal-body">
+
+					<div class="field_search">
+						<select name="" id="" title="검색어구분">
+							<option value="">ID/이름</option>
+						</select>
+						<input type="text" id="" name="" value="" title="검색내용입력">
+						<button type="button" class="btn_default bg_navy btn_search">검색</button>
+					</div>
+					<div class="bbs_info">
+						<div class="total">
+							<p class="cases">전체<span class="count">173</span>건</p>
+						</div>
+					</div>
+
+					<div class="tbl_scroll_wrap" style="height:200px;">
+						<table class="tbl_list">
+							<caption>목록</caption>
+							<colgroup>
+								<col style="width:40px">
+								<col style="width:80px">
+								<col>
+								<col style="width:20%">
+								<col style="width:25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</th>
+									<th scope="col">번호</th>
+									<th scope="col">사용자ID</th>
+									<th scope="col">사용자명</th>
+									<th scope="col">권한그룹</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+				</div>
+				<!-- Modal Footer -->
+				<div class="modal-footer tc">
+					<button type="button" data-dismiss="modal" class="btn_default btn_popup">닫기</button>
+					<button type="button" class="btn_default bg_blue btn_popup">등록</button>
+				</div>
+			</div>
+			<!-- //modal-content -->
+		</div>
+	</div>
+	<!-- //modal -->
+	
+</body>
+</html>

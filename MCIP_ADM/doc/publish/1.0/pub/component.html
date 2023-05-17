@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>USG코딩오픈메타캠퍼스통합플랫폼SW시스템</title>.
+	<title>USG코딩오픈메타캠퍼스통합플랫폼SW시스템</title>
 	<!-- css -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" media="all">
@@ -15,6 +15,10 @@
 	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="../js/jquery-ui.js"></script>
 	<script type="text/javascript" src="../js/datepicker.js"></script> 
+	<script type="text/javascript" src="../js/commonUI.js"></script>
+
+	<!-- bootstrap -->
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>	
 
 </head>
 <body>
@@ -169,14 +173,17 @@
 										<td>
 											<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span>checkbox1</span></label></span>
 											<span class="field_check"><label><input type="checkbox" id="" name="" value="" checked><span>checkbox2</span></label></span>
-											<span class="field_check"><label><input type="checkbox" id="" name="" value="" disabled class="checkbox"><span>checkbox3</span></label></span>
+											<br>
+											<br>
+											<span>체크표시만 있을경우</span>
+											<span class="field_check field_check_empty"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
 										</td>
 										<th scope="row">input radio</th>
 										<td>
 											<span class="field_radio"><label><input type="radio" id="" name="" value=""><span>radio1</span></label></span>
 											<span class="field_radio"><label><input type="radio" id="" name="" value="" checked><span>radio2</span></label></span>
 											<span class="field_radio"><label><input type="radio" id="" name="" value="" disabled><span>radio3</span></label></span>
-										</td>
+											</td>
 									</tr>
 									<tr>
 										<th scope="row">select</th>
@@ -212,6 +219,18 @@
 												</select>
 												<input type="text" id="" name="" value="" title="검색내용입력" class="search_text">
 											</div>	
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">검색</th>
+										<td colspan="3">
+											<div class="field_search">
+												<select name="" id="" title="검색어구분">
+													<option value="">검색어구분</option>
+												</select>
+												<input type="text" id="" name="" value="" title="검색내용입력">
+												<button type="button" class="btn_default bg_navy btn_search">검색</button>
+											</div>
 										</td>
 									</tr>
 								</tbody>
@@ -440,6 +459,54 @@
 
 						<div class="bundle">
 							<div class="heading">
+								<h4 class="title"> 테이블에 스크롤</h4>
+							</div>
+
+							<div class="tbl_scroll_wrap" style="height:200px;">
+								<table class="tbl_view">
+									<caption>상세</caption> 						
+									<colgroup>
+										<col style="width:200px">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col"></th>
+											<th scope="col"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row"></th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row"></th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row"></th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row"></th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row"></th>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>	
+							</div>
+						</div>
+
+						
+
+						<div style="height:30px;"></div>
+
+						<div class="bundle">
+							<div class="heading">
 								<h4 class="title">텍스트 정렬</h4>
 							</div>
 							<table class="tbl_view">
@@ -482,6 +549,7 @@
 							<button type="button" class="btn_default bd_red">취소</button>
 							<button type="button" class="btn_default bg_red">삭제</button>
 							<button type="button" class="btn_default bg_gray_02">중지</button>
+							<button type="button" class="btn_link">링크버튼</button>
 						</div>
 
 						<div style="height:30px;"></div>
@@ -560,6 +628,39 @@
 							<button type="button" class="btn_default bg_navy btn_mid">btn_mid</button>
 							<button type="button" class="btn_default bg_navy btn_la">btn_la</button>
 						</div>
+
+						<div style="height:30px;"></div>
+						<div class="bundle">
+							<div class="heading">
+								<h4 class="title">모달</h4>
+							</div>
+
+							<button type="button" data-toggle="modal" data-target="#modal_test">모달띄우기</button>
+							<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" aria-labelledby="modal_test" id="modal_test"><!-- aria-labelledby , id = data-target 같은 아이디 -->
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title">제목</h4>
+											<button type="button" data-dismiss="modal" class="close"><i class="fas fa-sharp fa-light fa-xmark"></i><span class="blind">닫기</span></button>
+										</div>
+										<!-- Modal body -->
+										<div class="modal-body">
+											내용
+										</div>
+										<!-- Modal Footer -->
+										<div class="modal-footer tc">
+											<button type="button" data-dismiss="modal" class="btn_default">닫기</button>
+											<button type="button" class="btn_default bg_blue">등록</button>
+										</div>
+									</div>
+									<!-- //modal-content -->
+								</div>
+							</div>
+							<!-- //modal -->
+						<div>
+
+
 
 
 					<!-- 내용 : e -->
