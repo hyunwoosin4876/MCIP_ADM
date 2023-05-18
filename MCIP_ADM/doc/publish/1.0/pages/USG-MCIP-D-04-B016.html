@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>USG코딩오픈메타캠퍼스통합플랫폼SW시스템</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.theme.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/common.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/content.css" media="all">
+
+	<!-- js -->
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../js/datepicker.js"></script> 
+	<script type="text/javascript" src="../js/commonUI.js"></script>
+
+	<!-- bootstrap -->
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>	
+</head>
+<body>
+
+
+	<button type="button" data-toggle="modal" data-target="#modal_pop" class="btn_default bg_black btn_bbs">게시글이동</button>
+
+	<!-- 팝업 게시글 이동 -->
+	<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="modal_pop" id="modal_pop">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">게시글 이동</h4>
+					<button type="button" data-dismiss="modal" class="close"><i class="fas fa-sharp fa-light fa-xmark"></i><span class="blind">닫기</span></button>
+				</div>
+				<!-- Modal body -->
+				<div class="modal-body">
+
+					<p class="mb20">게시글이 이동할 게시판을 선택해 주시기 바랍니다.</p>
+					<select name="" id="" title="게시판 선택" class="w100">
+						<option value="">게시판 선택</option>
+					</select>
+
+				</div>
+				<!-- Modal Footer -->
+				<div class="modal-footer tc">
+					<button type="button" data-dismiss="modal" class="btn_default btn_popup">닫기</button>
+					<button type="button" class="btn_default bg_black btn_popup">이동하기</button>
+				</div>
+			</div>
+			<!-- //modal-content -->
+		</div>
+	</div>
+	<!-- //modal -->
+	
+
+</body>
+</html>

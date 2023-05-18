@@ -301,6 +301,8 @@ button[class*='bg_'] {color:#fff;border:none;}
 .tbl_list tbody th{height:45px;padding:6px 10px;font-weight:normal;text-align:center;background:#eef1fa;}
 .tbl_list tbody td{height:45px;padding:6px 10px;text-align:center;border-bottom: solid 1px #E6E6E6}
 .tbl_list .subject{display:block;margin:0;width:auto;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;}
+.ellipsis{display:block;margin:0;width:auto;max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;}
+.state_completed{display: inline-block;padding:2px 10px;color:#fff;font-size:12px;text-align:center;background:#48a8f9;border-radius: 5px;}
 
 /* 상세 */
 .heading{display:flex;align-items:center;position:relative;margin:0 0 10px 0;padding:0 0 10px 0;border-bottom:1px solid #eee;}
@@ -316,6 +318,10 @@ button[class*='bg_'] {color:#fff;border:none;}
 .tbl_view tbody td:last-child{border-right:none;}
 
 .tbl_view .bd_line_r_none{border-right:none;}
+
+.qna_answer .status_date{margin:0 0 10px 0;padding:0 0 10px 0;border-bottom:1px solid #cecece;}
+.qna_answer .status_date .name{display:inline-block;margin-right:10px;}
+.qna_answer .written{width:100%;}
 
 .paging{clear:both;position:relative;width:100%;margin:0 0 10px 0;text-align:center;}
 .paging a{display:inline-block;font-size:12px;text-align:center;vertical-align:middle;}

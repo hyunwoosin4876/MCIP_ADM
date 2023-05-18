@@ -76,8 +76,8 @@
 				<!-- //side_area -->
 				<div class="content_area">
 					<div class="location">
-						<h3 class="page_title">공지사항 관리</h3>
-						<p class="local"><span class="home">HOME</span><span>사이트관리</span><span class="current">공지사항 관리</span></p>
+						<h3 class="page_title">FAQ 관리</h3>
+						<p class="local"><span class="home">HOME</span><span>사이트관리</span><span class="current">FAQ 관리</span></p>
 					</div>
 					<div class="content">
 					<!-- 내용 : s -->
@@ -96,18 +96,19 @@
 									<td>
 										<select id="" name="" title="선택"> 
 											<option value="" selected>- 선택 -</option> 
-											<option value="" >작성일시</option> 
-											<option value="" >최신순</option> 
 											<option value="" >제목</option> 
+											<option value="" >내용</option> 
+											<option value="" >제목+내용</option> 
+											<option value="" >작성자</option> 
 										</select> 
 										<input type="text" id="" name="" value="" title="검색어">
 									</td>
-									<th scope="row">노출여부</th>
+									<th scope="row">사용여부</th>
 									<td>
 										<select id="" name="" title="선택"> 
 											<option value="" selected>- 전체 -</option> 
-											<option value="" >노출</option> 
-											<option value="" >미노출</option> 
+											<option value="" >사용</option> 
+											<option value="" >미사용</option> 
 										</select> 
 									</td>
 								</tr>
@@ -131,6 +132,7 @@
 								<select name="" id="" title="페이지별 노출갯수">
 									<option value="">20개씩</option>
 								</select>
+								<button type="button"><span class="ico_ex"></span>엑셀다운로드</button>
 								<button type="button" class="btn_default bg_blue">등록</button>
 							</div>
 						</div>
@@ -139,7 +141,6 @@
 							<colgroup>
 								<col style="width:6%">
 								<col>
-								<col style="width:15%">
 								<col style="width:8%">
 								<col style="width:8%">
 								<col style="width:15%">
@@ -149,9 +150,8 @@
 								<tr>
 									<th scope="col">번호</th>
 									<th scope="col">제목</th>
-									<th scope="col">첨부</th>
-									<th scope="col">작성자</th>
 									<th scope="col">노출여부</th>
+									<th scope="col">작성자</th>
 									<th scope="col">작성일시</th>
 									<th scope="col">조회수</th>
 								</tr>
@@ -159,14 +159,9 @@
 							<tbody>
 								<tr>
 									<td>1</td>
-									<td class="tl"><a href="#none" class="ellipsis">공지사항입니다공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.</a></td>
-									<td>
-										<button type="button"><span class="ico_pdf"></span>PDF</button>
-										<button type="button"><span class="ico_ex"></span>엑셀</button>
-										<button type="button"><span clas="ico_hw"></span>한글</button>
-									</td>
-									<td>관리자</td>
+									<td class="tl"><a href="#none" class="ellipsis">FIDIC Yellow Book은 어떠한 경우에 적용될수 있는지? </a></td>
 									<td>노출</td>
+									<td>관리자</td>
 									<td>2021.01.20 00:00:00</td>
 									<td>2</td>
 								</tr>

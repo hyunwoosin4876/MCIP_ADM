@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.theme.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/common.css" media="all">
 	<link rel="stylesheet" type="text/css" href="../css/content.css" media="all">
-
+	
 	<!-- js -->
 	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="../js/jquery-ui.js"></script>
@@ -260,6 +260,10 @@
 									<select name="" id="" title="페이지별 노출갯수">
 										<option value="">20개씩</option>
 									</select>
+									<button type="button"><span class="ico_pdf"></span>PDF</button>
+									<button type="button"><span class="ico_ex"></span>엑셀</button>
+									<button type="button"><span clas="ico_hw"></span>한글</button>
+									<button type="button" class="btn_default bg_blue">등록</button>
 								</div>
 							</div>
 							<table class="tbl_list">
@@ -283,14 +287,14 @@
 								<tbody>
 									<tr>
 										<td>1</td>
-										<td class="tl"><a href="#none" class="subject">공지사항입니다.</a></td>
+										<td class="tl"><a href="#none" class="ellipsis">공지사항입니다.</a></td>
 										<td>관리자</td>
 										<td>2017-06-01</td>
 										<td>9999</td>
 									</tr>
 									<tr>
 										<td>1</td>
-										<td class="tl"><a href="#none" class="subject">공지사항입니다공지사항입니다공지사항입니다공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.</a></td>
+										<td class="tl"><a href="#none" class="ellipsis">공지사항입니다공지사항입니다공지사항입니다공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.</a></td>
 										<td>관리자</td>
 										<td>2017-06-01</td>
 										<td>9999</td>
@@ -384,6 +388,22 @@
 												<option value="" selected>- 선택 -</option> 
 												<option value="" >선택1</option> 
 											</select> 
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">첨부파일</th>
+										<td>
+											<div class="file_pack">
+												<button type="button" class="btn_fileAdd">파일추가</button>
+												<div class="file_group">
+													<div class="file_attach"> 
+														<label><input type="file" class="upload_hidden"></label>
+														<input value="" placeholder="파일검색" class="upload_name">
+														<button type="button" class="btn_fileDel">파일삭제</button>
+													</div>
+												</div>
+											</div>
+											<p class="txt_type_01">링크 주소를 입력하시면 해당 주소의 웹페이지로 이동합니다.</p>
 										</td>
 									</tr>
 								</tbody>
@@ -550,6 +570,7 @@
 							<button type="button" class="btn_default bg_red">삭제</button>
 							<button type="button" class="btn_default bg_gray_02">중지</button>
 							<button type="button" class="btn_link">링크버튼</button>
+							<button type="button" class="btn_down">다운로드버튼</button>
 						</div>
 
 						<div style="height:30px;"></div>
@@ -635,7 +656,7 @@
 								<h4 class="title">모달</h4>
 							</div>
 
-							<button type="button" data-toggle="modal" data-target="#modal_test">모달띄우기</button>
+							<button type="button" data-toggle="modal" data-target="#modal_test">상단 모달띄우기</button>
 							<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" aria-labelledby="modal_test" id="modal_test"><!-- aria-labelledby , id = data-target 같은 아이디 -->
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -650,8 +671,32 @@
 										</div>
 										<!-- Modal Footer -->
 										<div class="modal-footer tc">
-											<button type="button" data-dismiss="modal" class="btn_default">닫기</button>
-											<button type="button" class="btn_default bg_blue">등록</button>
+											<button type="button" data-dismiss="modal" class="btn_default btn_popup">닫기</button>
+											<button type="button" class="btn_default bg_blue btn_popup">등록</button>
+										</div>
+									</div>
+									<!-- //modal-content -->
+								</div>
+							</div>
+							<!-- //modal -->
+
+							<button type="button" data-toggle="modal" data-target="#modal_test2">가운데 모달띄우기</button>
+							<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" aria-labelledby="modal_test2" id="modal_test2"><!-- aria-labelledby , id = data-target 같은 아이디 -->
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title">제목</h4>
+											<button type="button" data-dismiss="modal" class="close"><i class="fas fa-sharp fa-light fa-xmark"></i><span class="blind">닫기</span></button>
+										</div>
+										<!-- Modal body -->
+										<div class="modal-body">
+											내용
+										</div>
+										<!-- Modal Footer -->
+										<div class="modal-footer tc">
+											<button type="button" data-dismiss="modal" class="btn_default btn_popup">닫기</button>
+											<button type="button" class="btn_default bg_blue btn_popup">등록</button>
 										</div>
 									</div>
 									<!-- //modal-content -->

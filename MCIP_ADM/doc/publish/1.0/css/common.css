@@ -57,6 +57,7 @@ button:focus{outline:0;}
 
 .btn_default{display:inline-block;min-height:32px;padding:2px 15px;box-sizing:border-box;text-align:center;vertical-align:middle;color:#485057;font-size:12px;background-color:#fff;-webkit-transition: all 0.4s;transition: all 0.4s;}
 .btn_link{background:none;border:none;text-decoration: underline;}
+.btn_down{padding:0;background:none;border:none;text-decoration: underline;}
 
 .btnC{text-align:center;}
 .btnL{text-align:left;}

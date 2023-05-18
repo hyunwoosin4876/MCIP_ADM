@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>USG코딩오픈메타캠퍼스통합플랫폼SW시스템</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.theme.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/common.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/content.css" media="all">
+
+	<!-- js -->
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../js/datepicker.js"></script> 
+	<script type="text/javascript" src="../js/commonUI.js"></script>
+
+	<!-- bootstrap -->
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>	
+</head>
+<body>
+
+
+	<button type="button" data-toggle="modal" data-target="#modal_manager" class="btn_link">10명</button>
+	
+	<!-- 관리자검색팝업 -->
+	<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"  aria-labelledby="modal_manager" id="modal_manager">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">관리자 검색</h4>
+					<button type="button" data-dismiss="modal" class="close"><i class="fas fa-sharp fa-light fa-xmark"></i><span class="blind">닫기</span></button>
+				</div>
+				<!-- Modal body -->
+				<div class="modal-body">
+
+					<div class="field_search">
+						<select name="" id="" title="검색어구분">
+							<option value="">ID/이름</option>
+						</select>
+						<input type="text" id="" name="" value="" title="검색내용입력">
+						<button type="button" class="btn_default bg_navy btn_search">검색</button>
+					</div>
+					<div class="bbs_info">
+						<div class="total">
+							<p class="cases">전체<span class="count">173</span>건</p>
+						</div>
+					</div>
+
+					<div class="tbl_scroll_wrap" style="height:200px;">
+						<table class="tbl_list">
+							<caption>목록</caption>
+							<colgroup>
+								<col style="width:40px">
+								<col style="width:80px">
+								<col>
+								<col style="width:20%">
+								<col style="width:25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</th>
+									<th scope="col">번호</th>
+									<th scope="col">사용자ID</th>
+									<th scope="col">사용자명</th>
+									<th scope="col">권한그룹</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+								<tr>
+									<td>
+										<span class="field_check"><label><input type="checkbox" id="" name="" value=""><span class="blind">선택</span></label></span>
+									</td>
+									<td>80</td>
+									<td>admin0080</td>
+									<td>관리자</td>
+									<td>권한그룹 1</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+				</div>
+				<!-- Modal Footer -->
+				<div class="modal-footer tc">
+					<button type="button" data-dismiss="modal" class="btn_default btn_popup">닫기</button>
+					<button type="button" class="btn_default bg_blue btn_popup">등록</button>
+				</div>
+			</div>
+			<!-- //modal-content -->
+		</div>
+	</div>
+	<!-- //modal -->
+	
+
+</body>
+</html>
