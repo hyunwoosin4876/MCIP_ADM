@@ -32,5 +32,10 @@
 		<!-- 리턴 메시지 관련 -->
 		<!-- <typeAlias type="mcip.webapps.dto.msg.MsgEntity" alias="msg" />
 		<typeAlias type="mcip.webapps.dto.msg.MsgDTO" alias="msgDTO" /> -->
+
+		<!-- 게시판 -->
+		<typeAlias type="mcip.webapps.dto.commCd.CommCdEntity" alias="commCd" />
+		<typeAlias type="mcip.webapps.dto.commCd.CommCdDTO" alias="commCdDTO" />
+		
 	</typeAliases>
 </configuration>

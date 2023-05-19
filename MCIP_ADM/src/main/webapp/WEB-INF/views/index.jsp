@@ -6,4 +6,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 index 페이지 </br>
-<a herf="/board/list.do">board page</a>
+<a herf="/pub/workList.do">board page</a>
+
+jdkfsdkjlafjkdsfjdklflasdjfkljsljdfklfsk

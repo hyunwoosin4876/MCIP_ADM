@@ -4,27 +4,26 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-	<!-- 3단 -->
+	<!-- 기본형 -->
 	<definition name="layouts-tiles" 		template="/WEB-INF/config/layouts/default/layouts-tiles.jsp">
-		<put-attribute name="header"    	value="/WEB-INF/config/layouts/header.jsp" />
-		<put-attribute name="left"   		value="/WEB-INF/config/layouts/default/left.jsp" />
-		<put-attribute name="content"   	value="" />
-		<put-attribute name="footer"    	value="/WEB-INF/config/layouts/footer.jsp" />
-		<put-attribute name="title"    		value="MCIP" />
-		<put-attribute name="stylecss" 		value="/WEB-INF/config/layouts/default/stylecss.jsp"></put-attribute>
-		<put-attribute name="scriptjs" 		value="/WEB-INF/config/layouts/default/js.jsp"></put-attribute>
+		<put-attribute name="head"    	value="/WEB-INF/config/layouts/head.jsp" />
+		<put-attribute name="header"    value="/WEB-INF/config/layouts/header.jsp" />
+		<put-attribute name="gnb"    	value="/WEB-INF/config/layouts/gnb.jsp" />
+		<put-attribute name="aside" 	value="/WEB-INF/config/layouts/default/aside.jsp" />
+		<put-attribute name="page" 		value="/WEB-INF/config/layouts/default/page.jsp" />
+		<put-attribute name="footer"    value="/WEB-INF/config/layouts/footer.jsp" />
 	</definition>
 	<definition name="*.tiles" 				extends="layouts-tiles">
-		<put-attribute name="content" 	 	value="/WEB-INF/views/{1}.jsp" />
+		<put-attribute name="page" 	 	value="/WEB-INF/views/{1}.jsp" />
 	</definition>
 	<definition name="*/*.tiles" 			extends="layouts-tiles">
-		<put-attribute name="content"	   	value="/WEB-INF/views/{1}/{2}.jsp" />
+		<put-attribute name="page"	   	value="/WEB-INF/views/{1}/{2}.jsp" />
 	</definition>
 	<definition name="*/*/*.tiles" 			extends="layouts-tiles">
-		<put-attribute name="content"  		value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+		<put-attribute name="page"  		value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
 	</definition>
 	
-	<!-- 2단 -->	
+	<!-- 메인, 로그인 -->	
 	<definition name="two-tiles" 			template="/WEB-INF/config/layouts/twoLay/layouts-tiles.jsp">
 		<put-attribute name="content"   	value="" />
 		<put-attribute name="header"    	value="/WEB-INF/config/layouts/header.jsp" />

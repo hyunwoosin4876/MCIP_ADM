@@ -21,7 +21,7 @@ public class DefaultDTO implements Serializable {
 	private int pageCount;					// 페이지당 조회 개수
 	private int pageNumber;					// 페이지번호(1부터 시작)드
 	private int startCnt, endCnt;
-	private String pagingYn = null;			//페이지 유무	
+	private String pagingYn = null;			// 페이지 유무	
 	/**
 	 * 등록자
 	 */
