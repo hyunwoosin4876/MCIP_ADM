@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<properties>
+         <property name="name">mcip</property>
+         <property name="pattern2">%d{yy-MM-dd HH:mm:ss.SSS} | %-5.5p | %-80.80C | %msg%n</property>
+         <property name="pattern">%d %5p [%c] %m%n</property>
+    </properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+        	<PatternLayout>
+				<pattern>${pattern2}</pattern>
+            </PatternLayout>
+       </Console>
+		<RollingFile name="file" fileName="C:/log/${name}.log"
+	                              filePattern="C:/log/$${date:yyyy}/$${date:MM}/$${date:dd}/${name}_%d{yyyyMMddHH}.log">
+                <PatternLayout>
+                        <pattern>${pattern2}</pattern>
+                </PatternLayout>
+                <Policies>
+                        <TimeBasedTriggeringPolicy /><!-- Rotated everyday -->
+                </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="egovframework" level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+            <appender-ref ref="file" />
+        </Logger>
+	    <Logger name="jdbc.sqlonly" level="OFF" additivity="false">
+	        <AppenderRef ref="console" />
+	        <appender-ref ref="file" />
+	    </Logger>
+	    <Logger name="jdbc.sqltiming" level="DEBUG" additivity="false">
+	        <AppenderRef ref="console" />
+	        <appender-ref ref="file" />
+	    </Logger>
+	    <Logger name="jdbc.audit" level="OFF" additivity="false">
+	        <AppenderRef ref="console" />
+	        <appender-ref ref="file" />
+	    </Logger>
+	    <Logger name="jdbc.resultset" level="OFF" additivity="false">
+	        <AppenderRef ref="console" />
+	        <appender-ref ref="file" />
+	    </Logger>
+	     <Logger name="jdbc.connection" level="DEBUG" additivity="false">
+	        <AppenderRef ref="console" />
+	        <appender-ref ref="file" />
+	    </Logger>
+	    <Logger name="jdbc.resultsettable" level="DEBUG" additivity="false">
+	        <AppenderRef ref="console" />
+	        <appender-ref ref="file" />
+	    </Logger>
+	    <Logger name="org.springframework" level="DEBUG" additivity="false">
+	        <AppenderRef ref="console" />
+	        <appender-ref ref="file" />
+	    </Logger>
+        <Root level="DEBUG">
+            <AppenderRef ref="console" />
+             <appender-ref ref="file" />
+        </Root>
+    </Loggers>
+</Configuration>

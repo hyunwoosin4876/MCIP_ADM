@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>USG코딩오픈메타캠퍼스통합플랫폼SW시스템</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/content.css" media="all">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/commonUI.js"></script>
+</head>
+<body>
+
+	<div id="wrap">
+		 <!-- s : header-->
+		 <div id="header" class="sub_header">
+			<div class="inner">
+				<h1><a href="/"></a><img src="../img/logo.png" alt="USG코딩오픈메타캠퍼스통합플랫폼SW시스템"></a></h1>
+				<div class="utility">
+					<div class="user"><span class="name"><i class="fa-solid fa-user"></i>홍길동</span>님</div>
+					<div class="btns">
+						<button type="button">비밀번호변경</button>
+						<button type="button">사용자관리</button>
+						<button type="button">로그아웃</button>
+					</div>
+				</div>
+			</div>
+		</div>  
+		<!-- e : header --> 
+
+		<!-- s : gnb -->
+		<div class="gnb">
+			<ul>
+				<li><a href="#">사이트관리</a></li>
+				<li><a href="#">사용자관리</a></li>
+				<li><a href="#">PCMS관리</a></li>
+				<li><a href="#">EMES 관리</a></li>
+				<li><a href="#">LMS(이동)</a></li>
+				<li><a href="#">LAI(이동)</a></li>
+			</ul>	
+		</div>
+		<!-- e : gnb --> 
+
+		<!-- s : container -->
+		<div id="container" class="sub_container">
+			<div class="inner">
+				<div class="side_area">
+					<div id="lnb">
+						<ul>
+							<li>
+								<a href="#none">코드관리</a>
+								<ul>
+									<li><a href="#none">sub1-1</a></li>
+									<li><a href="#none">sub1-2</a></li>
+									<li><a href="#none">sub1-3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#none">메뉴관리</a>
+								<ul>
+									<li><a href="#none">sub2-1</a></li>
+									<li><a href="#none">sub2-2</a></li>
+									<li><a href="#none">sub2-3</a></li>
+								</ul>
+							</li>
+							<li><a href="#none">팝업관리</a></li>
+							<li><a href="#none">배너관리</a></li>
+							<li><a href="#none">공지사항 관리</a></li>
+							<li><a href="#none">FAQ 관리</a></li>
+							<li><a href="#none">1:1 문의관리</a></li>
+							<li><a href="#none">약관관리</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //side_area -->
+				<div class="content_area">
+					<div class="location">
+						<h3 class="page_title">팝업관리</h3>
+						<p class="local"><span class="home">HOME</span><span>사이트관리</span><span class="current">팝업관리</span></p>
+					</div>
+					<div class="content">
+					<!-- 내용 : s -->
+
+					<div class="bundle filter_finder">
+						<table class="tbl_filter">					
+							<colgroup>
+								<col style="width:100px">
+								<col>
+								<col style="width:100px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">제목</th>
+									<td><input type="text" id="" name="" value="" title="제목" class="w100"></td>
+									<th scope="row">게재기간</th>
+									<td>
+										<div class="field_period">
+											<span class="dateNum">
+												<input type="text" id="" name="" value="" title="시작">
+												<button type="button" class="btn_calendar"><i class="fas fa-sharp fa-light fa-calendar"></i><span class="blind">달력</span></button>
+											</span>
+											<span class="symbol">~</span>
+											<span class="dateNum">
+												<input type="text" id="" name="" value="" title="종료">
+												<button type="button" class="btn_calendar"><i class="fas fa-sharp fa-light fa-calendar"></i><span class="blind">달력</span></button>
+											</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btnC filter_finder_btn">
+							<button type="button" class="btn_default bg_gray btn_bbs">초기화</button>
+							<button type="button" class="btn_default bg_navy btn_bbs">검색</button>
+						</div>
+					</div>
+
+					<div class="bundle">
+						<div class="heading">
+							<h4 class="title">팝업 목록</h4>
+						</div>
+						<div class="bbs_info">
+							<div class="part_l">
+								<div class="total">
+									<p class="cases">전체<span class="count">173</span>건</p>
+									<p class="page">페이지<span class="current_page">1</span><span class="symbol">/</span><span class="total_page">10</span></p>
+								</div>
+							</div>
+							<div class="part_r">
+								<select name="" id="" title="페이지별 노출갯수">
+									<option value="">20개씩</option>
+								</select>
+								<button type="button" class="btn_default bg_blue">등록</button>
+							</div>
+						</div>
+						<table class="tbl_list">
+							<caption>목록</caption>
+							<colgroup>
+								<col style="width:5%">
+								<col>
+								<col style="width:8%">
+								<col style="width:20%">
+								<col style="width:8%">
+								<col style="width:15%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">제목</th>
+									<th scope="col">등록자</th>
+									<th scope="col">팝업게재기간</th>
+									<th scope="col">노출여부</th>
+									<th scope="col">등록일시</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td class="tl"><a href="#none" class="subject">공지사항입니다공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.a></td>
+									<td>관리자</td>
+									<td>2021.01.20 00:00:00 ~ <br>2021.01.20 00:00:00</td>
+									<td>노출</td>
+									<td>2021.01.20 00:00:00</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tl"><a href="#none" class="subject">공지사항입니다.</a></td>
+									<td>관리자</td>
+									<td>2021.01.20 00:00:00 ~ <br>2021.01.20 00:00:00</td>
+									<td>노출</td>
+									<td>2021.01.20 00:00:00</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tl"><a href="#none" class="subject">공지사항입니다.</a></td>
+									<td>관리자</td>
+									<td>2021.01.20 00:00:00 ~ <br>2021.01.20 00:00:00</td>
+									<td>미노출</td>
+									<td>2021.01.20 00:00:00</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tl"><a href="#none" class="subject">공지사항입니다.</a></td>
+									<td>관리자</td>
+									<td>2021.01.20 00:00:00 ~ <br>2021.01.20 00:00:00</td>
+									<td>노출</td>
+									<td>2021.01.20 00:00:00</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="tl"><a href="#none" class="subject">공지사항입니다.</a></td>
+									<td>관리자</td>
+									<td>2021.01.20 00:00:00 ~ <br>2021.01.20 00:00:00</td>
+									<td>노출</td>
+									<td>2021.01.20 00:00:00</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="paging">
+							<a href="#" class="first"><span class="skip">처음 페이지</span></a>
+							<a href="#" class="prev"><span class="skip">이전 페이지</span></a>
+							<a href="#" class="num current">1</a>
+							<a href="#" class="num">2</a>
+							<a href="#" class="num">3</a>
+							<a href="#" class="num">4</a>
+							<a href="#" class="num">5</a>
+							<a href="#" class="next"><span class="skip">다음 페이지</span></a>
+							<a href="#" class="last"><span class="skip">다음 페이지</span></a>
+						</div>
+					</div>
+							
+
+					<!-- 내용 : e -->
+					</div>
+				</div>
+				<!-- //content_area -->
+			</div>	
+		</div>
+		<!-- e : container -->
+
+		<!-- s : footer -->
+		<div id="footer">
+			<div class="inner">
+				<p class="addr">51391 경상남도 창원시 의창구 차룡로48번길 54 기업연구관 1층 TEL 055-294-9949 FAX 055-295-7474</p>
+				<p class="copyright">Copyright 2021 경남지역혁신플랫폼. All rights reserved.</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+	<!-- //wrap -->	
+	
+</body>
+</html>

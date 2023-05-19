@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>USG코딩오픈메타캠퍼스통합플랫폼SW시스템</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/content.css" media="all">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/commonUI.js"></script>
+</head>
+<body>
+
+	<div id="wrap">
+		 <!-- s : header-->
+		 <div id="header" class="sub_header">
+			<div class="inner">
+				<h1><a href="/"></a><img src="../img/logo.png" alt="USG코딩오픈메타캠퍼스통합플랫폼SW시스템"></a></h1>
+				<div class="utility">
+					<div class="user"><span class="name"><i class="fa-solid fa-user"></i>홍길동</span>님</div>
+					<div class="btns">
+						<button type="button">비밀번호변경</button>
+						<button type="button">사용자관리</button>
+						<button type="button">로그아웃</button>
+					</div>
+				</div>
+			</div>
+		</div>  
+		<!-- e : header --> 
+
+		<!-- s : gnb -->
+		<div class="gnb">
+			<ul>
+				<li><a href="#">사이트관리</a></li>
+				<li><a href="#">사용자관리</a></li>
+				<li><a href="#">PCMS관리</a></li>
+				<li><a href="#">EMES 관리</a></li>
+				<li><a href="#">LMS(이동)</a></li>
+				<li><a href="#">LAI(이동)</a></li>
+			</ul>	
+		</div>
+		<!-- e : gnb --> 
+
+		<!-- s : container -->
+		<div id="container" class="sub_container">
+			<div class="inner">
+				<div class="side_area">
+					<div id="lnb">
+						<ul>
+							<li>
+								<a href="#none">코드관리</a>
+								<ul>
+									<li><a href="#none">sub1-1</a></li>
+									<li><a href="#none">sub1-2</a></li>
+									<li><a href="#none">sub1-3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#none">메뉴관리</a>
+								<ul>
+									<li><a href="#none">sub2-1</a></li>
+									<li><a href="#none">sub2-2</a></li>
+									<li><a href="#none">sub2-3</a></li>
+								</ul>
+							</li>
+							<li><a href="#none">팝업관리</a></li>
+							<li><a href="#none">배너관리</a></li>
+							<li><a href="#none">공지사항 관리</a></li>
+							<li><a href="#none">FAQ 관리</a></li>
+							<li><a href="#none">1:1 문의관리</a></li>
+							<li><a href="#none">약관관리</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //side_area -->
+				<div class="content_area">
+					<div class="location">
+						<h3 class="page_title">팝업관리</h3>
+						<p class="local"><span class="home">HOME</span><span>사이트관리</span><span class="current">팝업관리</span></p>
+					</div>
+					<div class="content">
+					<!-- 내용 : s -->
+
+					<div class="bundle">
+						<div class="heading">
+							<h4 class="title">팝업 수정</h4>
+						</div>
+						<table class="tbl_view">
+							<caption>상세</caption> 						
+							<colgroup>
+								<col style="width:200px">
+								<col>
+								<col style="width:200px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">작성자</th>
+									<td></td>
+									<th scope="row">등록/최종수정 일시</th>
+									<td></td>
+								</tr>
+								<tr>
+									<th scope="row">팝업제목<span class="ico_necessary"><span class="blind">필수</span></span></th>
+									<td><input type="text" id="" name="" value="" class="w100"></td>
+									<th scope="row">노출여부<span class="ico_necessary"><span class="blind">필수</span></span></th>
+									<td>
+										<span class="field_radio"><label><input type="radio" id="" name="" value=""><span>노출</span></label></span>
+										<span class="field_radio"><label><input type="radio" id="" name="" value=""><span>미노출</span></label></span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">팝업사이즈<span class="ico_necessary"><span class="blind">필수</span></span></th>
+									<td>
+										<input type="text" id="" name="" value="" placeholder="가로" class="wpx100">
+										<input type="text" id="" name="" value="" placeholder="세로" class="wpx100">
+									</td>
+									<th scope="row">팝업위치<span class="ico_necessary"><span class="blind">필수</span></span></th>
+									<td>
+										<input type="text" id="" name="" value="" placeholder="상단" class="wpx100">
+										<input type="text" id="" name="" value="" placeholder="왼쪽" class="wpx100">
+										<p class="txt_type_01">팝업위치는 상단/좌측 기준 위치</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">노출기간<span class="ico_necessary"><span class="blind">필수</span></span></th>
+									<td>
+										<div class="field_period">
+											<span class="dateNum">
+												<input type="text" id="" name="" value="" title="시작">
+												<button type="button" class="btn_calendar"><i class="fas fa-sharp fa-light fa-calendar"></i><span class="blind">달력</span></button>
+											</span>
+											<span class="symbol">~</span>
+											<span class="dateNum">
+												<input type="text" id="" name="" value="" title="종료">
+												<button type="button" class="btn_calendar"><i class="fas fa-sharp fa-light fa-calendar"></i><span class="blind">달력</span></button>
+											</span>
+										</div>
+									</td>
+									<th scope="row">링크타입<span class="ico_necessary"><span class="blind">필수</span></span></th>
+									<td>
+										<span class="field_radio"><label><input type="radio" id="" name="" value=""><span>새창</span></label></span>
+										<span class="field_radio"><label><input type="radio" id="" name="" value=""><span>현재창 (부모창)</span></label></span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">링크URL</th>
+									<td colspan="3">
+										<input type="text" id="" name="" value="" class="w100">
+										<p class="txt_type_01">링크 주소를 입력하시면 해당 주소의 웹페이지로 이동합니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">팝업이미지<span class="ico_necessary"><span class="blind">필수</span></span></th>
+									<td colspan="3">
+										<div class="btnR">
+											<button type="button" class="btn_default bg_red btn_mid mb5">삭제</button>
+										</div>
+										<input type="file" class="w100">
+										
+										<p class="txt_type_01">이미지 등록시 팝업 사이즈와 동일한 사이즈로 등록해 주세요.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">내용입력</th>
+									<td colspan="3">
+										<textarea name="" id="" style="width:100%;height:300px;"></textarea>
+										<p class="txt_type_01">팝업 이미지를 등록한 경우, 작성한 내용은 이미지의 대체 텍스프로 사용 됩니다.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btnC">
+							<button type="button" class="btn_default bd_red btn_bbs">취소</button>
+							<button type="button" class="btn_default bg_blue btn_bbs">등록</button>
+							<button type="button" class="btn_default bg_navy btn_bbs">저장</button>
+						</div>
+					</div>
+
+					<!-- 내용 : e -->
+					</div>
+				</div>
+				<!-- //content_area -->
+			</div>	
+		</div>
+		<!-- e : container -->
+
+		<!-- s : footer -->
+		<div id="footer">
+			<div class="inner">
+				<p class="addr">51391 경상남도 창원시 의창구 차룡로48번길 54 기업연구관 1층 TEL 055-294-9949 FAX 055-295-7474</p>
+				<p class="copyright">Copyright 2021 경남지역혁신플랫폼. All rights reserved.</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+	<!-- //wrap -->	
+	
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>USG코딩오픈메타캠퍼스통합플랫폼SW시스템</title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.theme.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/common.css" media="all">
+	<link rel="stylesheet" type="text/css" href="../css/content.css" media="all">
+
+	<!-- js -->
+	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../js/datepicker.js"></script>
+	<script>
+	// $(document).ready(function() {
+	// 	$(document).on('change', '.file-upload input[type="file"]', function() {
+	// 		var filename = $(this).val();
+	// 		if (/^\s*$/.test(filename)) {
+	// 			$(this).parents(".file-upload").find(".file-select-name").text("");
+	// 		} else {
+	// 			$(this).parents(".file-upload").find(".file-select-name").text(filename.substring(filename.lastIndexOf("\\") + 1, filename.length));
+	// 		}
+
+	// 		var uploadFile = $(this);
+	// 		var files = !!this.files ? this.files : [];
+	// 		if (!files.length || !window.FileReader) return; 
+
+	// 		if (/^image/.test(files[0].type)) {
+	// 			var reader = new FileReader();
+	// 			reader.readAsDataURL(files[0]); 
+	// 			reader.onloadend = function() { 
+	// 				uploadFile.closest(".file-upload").find('.imagePreview img').attr("src" ,this.result);
+	// 				uploadFile.closest(".file-upload").find('.imagePreview').addClass('uplode');
+	// 			}
+	// 		}
+	// 	});
+	// });
+	</script>
+</head>
+<body>
+
+	<div id="wrap">
+		 <!-- s : header-->
+		 <div id="header" class="sub_header">
+			<div class="inner">
+				<h1><a href="/"></a><img src="../img/logo.png" alt="USG코딩오픈메타캠퍼스통합플랫폼SW시스템"></a></h1>
+				<div class="utility">
+					<div class="user"><span class="name"><i class="fa-solid fa-user"></i>홍길동</span>님</div>
+					<div class="btns">
+						<button type="button">비밀번호변경</button>
+						<button type="button">사용자관리</button>
+						<button type="button">로그아웃</button>
+					</div>
+				</div>
+			</div>
+		</div>  
+		<!-- e : header --> 
+
+		<!-- s : gnb -->
+		<div class="gnb">
+			<ul>
+				<li><a href="#">사이트관리</a></li>
+				<li><a href="#">사용자관리</a></li>
+				<li><a href="#">PCMS관리</a></li>
+				<li><a href="#">EMES 관리</a></li>
+				<li><a href="#">LMS(이동)</a></li>
+				<li><a href="#">LAI(이동)</a></li>
+			</ul>	
+		</div>
+		<!-- e : gnb --> 
+
+		<!-- s : container -->
+		<div id="container" class="sub_container">
+			<div class="inner">
+				<div class="side_area">
+					<div id="lnb">
+						<ul>
+							<li>
+								<a href="#none">코드관리</a>
+								<ul>
+									<li><a href="#none">sub1-1</a></li>
+									<li><a href="#none">sub1-2</a></li>
+									<li><a href="#none">sub1-3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#none">메뉴관리</a>
+								<ul>
+									<li><a href="#none">sub2-1</a></li>
+									<li><a href="#none">sub2-2</a></li>
+									<li><a href="#none">sub2-3</a></li>
+								</ul>
+							</li>
+							<li><a href="#none">팝업관리</a></li>
+							<li><a href="#none">배너관리</a></li>
+							<li><a href="#none">공지사항 관리</a></li>
+							<li><a href="#none">FAQ 관리</a></li>
+							<li><a href="#none">1:1 문의관리</a></li>
+							<li><a href="#none">약관관리</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //side_area -->
+				<div class="content_area">
+					<div class="location">
+						<h3 class="page_title">배너관리</h3>
+						<p class="local"><span class="home">홈</span><span>사이트관리</span><span class="current">배너관리</span></p>
+					</div>
+					<div class="content">
+					<!-- 내용 : s -->
+
+						<div class="bundle">
+							<div class="heading">
+								<h4 class="title">배너등록</h4>
+								<div class="controller">
+									<button type="button" class="btn_default btn_mid bg_blue">배너 추가</button>
+								</div>
+							</div>
+							<table class="tbl_view">
+								<caption>배너관리</caption> 						
+								<colgroup>
+									<col style="width:80px">
+									<col style="width:25%">
+									<col>
+									<col>
+									<col style="width:300px">
+									<col style="width:100px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">순서<span class="ico_necessary"><span class="blind">필수</span></span></th>
+										<th scope="col">PC 모드 이미지<span class="ico_necessary"><span class="blind">필수</span></span></th>
+										<th scope="col">웹접근성 대체 텍스트<span class="ico_necessary"><span class="blind">필수</span></span></th>
+										<th scope="col">링크 URL</th>
+										<th scope="col">사용여부 및 게시기간</th>
+										<th scope="col">관리</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="text" id="" name="" value="" title="순서" class="w100 tc"></td>
+										<td>
+											<div class="upload-card">
+												<div class="file-upload">
+													<div class="file-select">
+														<div class="imagePreview">
+															<i class="fas fa-sharp fa-light fa-image"></i>
+															<img src="" alt="" >
+														</div>
+														<div class="file-select-name"></div>
+														<div class="tc"><button type="button" class="btn_default bg_blue">등록</button></div>
+														<input type="file" name="files[]" class="profileimg">
+													</div>
+												</div>
+											</div>
+											<p class="txt_type_01">권장이미지: 1920px * 520px / 10MB 이하 (JPG, JPEG, GIF, PNG)</p>
+										</td>
+										<td><input type="text" id="" name="" value="" title="웹접근성 대체 텍스트" class="w100"></td>
+										<td><input type="text" id="" name="" value="" title="링크 URL" class="w100"></td>
+										<td class="tc">
+											<div class="mb20">
+												<span class="field_radio"><label><input type="radio" id="" name="" value=""><span>사용</span></label></span>
+												<span class="field_radio"><label><input type="radio" id="" name="" value=""><span>미사용</span></label></span>
+											</div>
+											<div class="field_period_time mb5">
+												<div class="part_date">
+													<span class="dateNum">
+														<input type="text" id="" name="" value="" placeholder="시작일" title="시작일" class="datepicker">
+														<button type="button" class="btn_calendar"><i class="fas fa-sharp fa-light fa-calendar"></i><span class="blind">달력</span></button>
+													</span>
+												</div>
+												<div class="part_time">
+													<select id="" name="" title="시작시간" class="wpx80"> 
+														<option value=""></option> 	
+													</select> 
+													<select id="" name="" title="종료시간" class="wpx80"> 
+														<option value=""></option> 	
+													</select>
+												</div>
+											</div>
+											<div class="field_period_time">
+												<div class="part_date">
+													<span class="dateNum">
+														<input type="text" id="" name="" value="" placeholder="종료일" title="종료일" class="datepicker">
+														<button type="button" class="btn_calendar"><i class="fas fa-sharp fa-light fa-calendar"></i><span class="blind">달력</span></button>
+													</span>
+												</div>
+												<div class="part_time">
+													<select id="" name="" title="시작시간" class="wpx80"> 
+														<option value=""></option> 	
+													</select> 
+													<select id="" name="" title="종료시간" class="wpx80"> 
+														<option value=""></option> 	
+													</select>
+												</div>
+											</div>
+										</td>
+										<td class="tc">
+											<button type="button" class="btn_default bd_red">취소</button>
+											<div class="mb5"></div>
+											<button type="button" class="btn_default bg_navy">저장</button>
+										</td>
+									</tr>
+									<tr>
+										<td><input type="text" id="" name="" value="" title="순서" class="w100 tc"></td>
+										<td>
+											<div class="upload-card">
+												<div class="file-upload">
+													<div class="file-select">
+														<div class="imagePreview">
+															<i class="fas fa-sharp fa-light fa-image"></i>
+														</div>
+													
+														<div class="file-select-name"></div>
+														<div class="tc"><button type="button" class="btn_default bg_blue">등록</button></div>
+														<input type="file" name="files[]" class="profileimg">
+													</div>
+												</div>
+											</div>
+											<p class="txt_type_01">권장이미지: 1920px * 520px / 10MB 이하 (JPG, JPEG, GIF, PNG)</p>
+										</td>
+										<td><input type="text" id="" name="" value="" title="웹접근성 대체 텍스트" class="w100"></td>
+										<td><input type="text" id="" name="" value="" title="링크 URL" class="w100"></td>
+										<td class="tc">
+											<div class="mb20">
+												<span class="field_radio"><label><input type="radio" id="" name="" value="" checked><span>사용</span></label></span>
+												<span class="field_radio"><label><input type="radio" id="" name="" value=""><span>미사용</span></label></span>
+											</div>
+											<div class="field_period_time mb5">
+												<div class="part_date">
+													<span class="dateNum">
+														<input type="text" id="" name="" value="" placeholder="시작일" title="시작일" class="datepicker">
+														<button type="button" class="btn_calendar"><i class="fas fa-sharp fa-light fa-calendar"></i><span class="blind">달력</span></button>
+													</span>
+												</div>
+												<div class="part_time">
+													<select id="" name="" title="시작시간" class="wpx80"> 
+														<option value=""></option> 	
+													</select> 
+													<select id="" name="" title="종료시간" class="wpx80"> 
+														<option value=""></option> 	
+													</select>
+												</div>
+											</div>
+											<div class="field_period_time">
+												<div class="part_date">
+													<span class="dateNum">
+														<input type="text" id="" name="" value="" placeholder="종료일" title="종료일" class="datepicker">
+														<button type="button" class="btn_calendar"><i class="fas fa-sharp fa-light fa-calendar"></i><span class="blind">달력</span></button>
+													</span>
+												</div>
+												<div class="part_time">
+													<select id="" name="" title="시작시간" class="wpx80"> 
+														<option value=""></option> 	
+													</select> 
+													<select id="" name="" title="종료시간" class="wpx80"> 
+														<option value=""></option> 	
+													</select>
+												</div>
+											</div>
+										</td>
+										<td class="tc">
+											<button type="button" class="btn_default bg_orange">수정</button>
+											<div class="mb5"></div>
+											<button type="button" class="btn_default bg_red">삭제</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					<!-- 내용 : e -->
+					</div>
+				</div>
+				<!-- //content_area -->
+			</div>	
+		</div>
+		<!-- e : container -->
+
+		<!-- s : footer -->
+		<div id="footer">
+			<div class="inner">
+				<p class="addr">51391 경상남도 창원시 의창구 차룡로48번길 54 기업연구관 1층 TEL 055-294-9949 FAX 055-295-7474</p>
+				<p class="copyright">Copyright 2021 경남지역혁신플랫폼. All rights reserved.</p>
+			</div>
+		</div>
+		<!-- e : footer -->
+	</div>
+	<!-- //wrap -->	
+	
+</body>
+</html>
