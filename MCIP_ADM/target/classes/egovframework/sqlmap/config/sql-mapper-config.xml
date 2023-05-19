@@ -18,6 +18,10 @@
 		<typeAlias type="mcip.webapps.dto.board.BoardEntity" alias="board" />
 		<typeAlias type="mcip.webapps.dto.board.BoardDTO" alias="boardDTO" />
 		
+		<!-- 팝업 -->
+		<typeAlias type="mcip.webapps.dto.mainPopup.MainPopupEntity" alias="mainPopup" />
+		<typeAlias type="mcip.webapps.dto.mainPopup.MainPopupDTO" alias="mainPopupDTO" />
+		
 		<!-- <typeAlias type="mcip.webapps.dto.board.BoardEntity" alias="board" />
 		<typeAlias type="mcip.webapps.dto.board.BoardDTO" alias="boardDTO" /> -->
 		
