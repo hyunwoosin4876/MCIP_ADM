@@ -12,21 +12,23 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title><t:insertAttribute name="title" ignore="true" /></title>
-		<t:insertAttribute name="scriptjs" />
-		<t:insertAttribute name="stylecss" />
+		
 	</head>
 	<body>
-		<nav>
-		  <a href="#ct" class="skip sr-only sr-only-focusable">본문 내용바로가기</a>
-		</nav>
 		<div id="wrap">
+			<t:insertAttribute name="head"/>
 			<t:insertAttribute name="header"/>
-			<t:insertAttribute name="left"/>
-			<div id="ct">
-				<div id="content">
-					<t:insertAttribute name="content"/>
-				</div>		
-			</div> 
+			<t:insertAttribute name="gnb"/>
+			<!-- s : container -->
+			<div id="container" class="sub_container"/>
+				<div class="inner">
+					<t:insertAttribute name="aside"/>
+					
+					<t:insertAttribute name="page"/>
+				</div>	
+			</div>
+			<!-- e : container -->		
+			<t:insertAttribute name="footer"/>
 		</div>
 	</body>
 </html>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mcip.webapps.dao.commCd.CommCdDAO">
+
+	<!-- 상위코드 리스트 -->
+	<select id="getUpCommCdList" parameterType="commCd" resultType="commCdDTO">
+		/*fn : 상위코드 리스트 - getUpCommCdList, wr : 이상민*/
+		SELECT A.COMM_CD_SEQ AS commCdSeq
+		     , A.COMM_CD AS commCd
+		     , A.CD_NM AS cdNm
+		     , A.PARENT_CD AS parentCd
+		     , A.PARENT_CD_NM AS parentCdNm
+		     , A.CD_ORDER AS cdOrder
+		     , A.CD_USE_YN AS cdUseYn
+		  FROM COMMON_CODE A
+		 WHERE A.PARENT_CD IS NULL OR A.PARENT_CD = ''
+	</select>
+	
+	<!-- 하위위코드 리스트 -->
+	<select id="getDwCommCdList" parameterType="commCd" resultType="commCdDTO">
+		/*fn : 하위위코드 리스트 - getDwCommCdList, wr : 이상민*/
+		SELECT A.COMM_CD_SEQ AS commCdSeq
+		     , A.COMM_CD AS commCd
+		     , A.CD_NM AS cdNm
+		     , A.PARENT_CD AS parentCd
+		     , A.PARENT_CD_NM AS parentCdNm
+		     , A.CD_ORDER AS cdOrder
+		     , A.CD_USE_YN AS cdUseYn
+		  FROM COMMON_CODE A	
+		 WHERE A.PARENT_CD = #{commCd}
+	</select>
+	
+	<!-- 공통코드 상세 -->
+	<select id="getCommCdDetail" parameterType="commCd" resultType="commCdDTO">
+		/*fn : 공통코드 상세 - getCommCdDetail, wr : 이상민*/
+		SELECT A.COMM_CD_SEQ AS commCdSeq
+		     , A.COMM_CD AS commCd
+		     , A.CD_NM AS cdNm
+		     , A.PARENT_CD AS parentCd
+		     , A.PARENT_CD_NM AS parentCdNm
+		     , A.CD_ORDER AS cdOrder
+		     , A.CD_USE_YN AS cdUseYn
+		  FROM COMMON_CODE A	
+		 WHERE A.COMM_CD = #{commCdM}
+	</select>
+	
+	<!-- 공통코드 중복 체크 -->
+	<select id="getDupCnt" parameterType="commCd" resultType="int">
+		/*fn : 공통코드 중복 체크 - getDupCnt, wr : 이상민*/
+		SELECT COUNT(A.COMM_CD)
+  		  FROM COMMON_CODE A
+		 WHERE A.COMM_CD = #{commCdM}
+	</select>
+	
+	<!-- 공통코드 등록 -->
+	<insert id="insCommCd" parameterType="commCd">
+		/*fn : 공통코드 등록 - insCommCd, wr : 이상민*/
+		INSERT INTO COMMON_CODE(
+		  COMM_CD_SEQ
+		, COMM_CD
+		, CD_NM
+		, PARENT_CD
+		, PARENT_CD_NM
+		, CD_ORDER
+		, CD_USE_YN
+		, REG_ID
+		, REG_DT)
+		VALUES (
+		  (SELECT IFNULL(1, MAX(COMM_CD_SEQ)+1) FROM COMMON_CODE B)
+		, #{commCdM}
+		, #{cdNmM}
+		, #{parentCdM}
+		, #{parentCdNmM}
+		, #{cdOrderM}
+		, #{cdUseYnM}
+		, #{regId}
+		, NOW())
+	</insert>
+	
+	<!-- 공통코드 수정 -->
+	<insert id="updCommCd" parameterType="commCd">
+		/*fn : 공통코드 수정 - insCommCd, wr : 이상민*/
+		UPDATE COMMON_CODE
+		   SET CD_NM = #{cdNmM}
+		     , PARENT_CD = #{parentCdM}
+		     , PARENT_CD_NM = #{parentCdNmM}
+		     , CD_ORDER = #{cdOrderM}
+		     , CD_USE_YN = #{cdUseYnM}
+		     , UPD_ID = #{updId}
+		     , UPD_DT = NOW()
+		 WHERE COMM_CD = #{commCdM}
+	</insert>
+</mapper>
