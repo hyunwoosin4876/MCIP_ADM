@@ -914,7 +914,6 @@ function sweetConfirmAlert(msg, cancleBtnStr, confirmBtnStr, doTran, confirmList
 			confirm : {
 				text : confirmBtnStr
 				, value : true
-				, className : 'btn btn-outline-primary'
 			}
 		}
 	}).then((result) => {
