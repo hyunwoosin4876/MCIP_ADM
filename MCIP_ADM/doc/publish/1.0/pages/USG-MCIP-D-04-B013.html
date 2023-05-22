@@ -127,7 +127,7 @@
 														<div class="imagePreview">
 															<i class="fas fa-sharp fa-light fa-image"></i><!-- 이미지 등록하면 > display:none -->
 															<div class="file_thumbnail" style="display:none;"><!-- 이미지 등록하면 > display:block -->
-																<img src="../img/sample.jpg" alt="" style="max-width:300px;">
+																<img src="../img/sample.jpg" alt="" style="max-width:100%;">
 															</div>
 														</div>
 														<div class="file-select-name" style="display:none;">파일명.jpg</div><!-- 이미지 등록하면 > block -->
@@ -189,64 +189,18 @@
 									<tr>
 										<td><input type="text" id="" name="" value="" title="순서" class="w100 tc"></td>
 										<td>
-											<div class="upload-card">
-												<div class="file-upload">
-													<div class="file-select">
-														<div class="imagePreview">
-															<i class="fas fa-sharp fa-light fa-image"></i><!-- 이미지 등록하면 > display:none -->
-															<div class="file_thumbnail" style="display:none;"><!-- 이미지 등록하면 > display:block -->
-																<img src="../img/sample.jpg" alt="" style="max-width:300px;">
-															</div>
-														</div>
-														<div class="file-select-name" style="display:none;">파일명.jpg</div><!-- 이미지 등록하면 > block -->
-														<div class="tc">
-															<button type="button" class="btn_default bg_blue">등록</button>
-														</div>
-														<input type="file" name="files[]" class="profileimg">
-													</div>
+											<div class="imagePreview">
+												<div class="file_thumbnail">
+													<img src="../img/sample.jpg" alt="" style="max-width:100%;">
 												</div>
 											</div>
-											<p class="txt_type_01">권장이미지: 1920px * 520px / 10MB 이하 (JPG, JPEG, GIF, PNG)</p>
+											<div class="file-select-name">파일명.jpg</div>
 										</td>
 										<td><input type="text" id="" name="" value="" title="웹접근성 대체 텍스트" class="w100"></td>
 										<td><input type="text" id="" name="" value="" title="링크 URL" class="w100"></td>
 										<td class="tc">
-											<div class="mb20">
-												<span class="field_radio"><label><input type="radio" id="" name="" value="" checked><span>사용</span></label></span>
-												<span class="field_radio"><label><input type="radio" id="" name="" value=""><span>미사용</span></label></span>
-											</div>
-											<div class="field_period_time mb5">
-												<div class="part_date">
-													<span class="dateNum">
-														<input type="text" id="" name="" value="" placeholder="시작일" title="시작일" class="datepicker">
-														<button type="button" class="btn_calendar"><i class="fas fa-sharp fa-light fa-calendar"></i><span class="blind">달력</span></button>
-													</span>
-												</div>
-												<div class="part_time">
-													<select id="" name="" title="시작시간" class="wpx80"> 
-														<option value=""></option> 	
-													</select> 
-													<select id="" name="" title="종료시간" class="wpx80"> 
-														<option value=""></option> 	
-													</select>
-												</div>
-											</div>
-											<div class="field_period_time">
-												<div class="part_date">
-													<span class="dateNum">
-														<input type="text" id="" name="" value="" placeholder="종료일" title="종료일" class="datepicker">
-														<button type="button" class="btn_calendar"><i class="fas fa-sharp fa-light fa-calendar"></i><span class="blind">달력</span></button>
-													</span>
-												</div>
-												<div class="part_time">
-													<select id="" name="" title="시작시간" class="wpx80"> 
-														<option value=""></option> 	
-													</select> 
-													<select id="" name="" title="종료시간" class="wpx80"> 
-														<option value=""></option> 	
-													</select>
-												</div>
-											</div>
+											<p>사용</p>
+											<p>2022-11-01  00:00 ~ 2999-12-31  23:59</p>
 										</td>
 										<td class="tc">
 											<button type="button" class="btn_default bg_orange">수정</button>
