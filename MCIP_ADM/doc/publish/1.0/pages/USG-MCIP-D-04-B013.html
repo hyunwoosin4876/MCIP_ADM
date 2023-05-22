@@ -14,32 +14,9 @@
 	<!-- js -->
 	<script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="../js/jquery-ui.js"></script>
-	<script type="text/javascript" src="../js/datepicker.js"></script>
-	<script>
-	// $(document).ready(function() {
-	// 	$(document).on('change', '.file-upload input[type="file"]', function() {
-	// 		var filename = $(this).val();
-	// 		if (/^\s*$/.test(filename)) {
-	// 			$(this).parents(".file-upload").find(".file-select-name").text("");
-	// 		} else {
-	// 			$(this).parents(".file-upload").find(".file-select-name").text(filename.substring(filename.lastIndexOf("\\") + 1, filename.length));
-	// 		}
+	<script type="text/javascript" src="../js/datepicker.js"></script> 
+	<script type="text/javascript" src="../js/commonUI.js"></script>
 
-	// 		var uploadFile = $(this);
-	// 		var files = !!this.files ? this.files : [];
-	// 		if (!files.length || !window.FileReader) return; 
-
-	// 		if (/^image/.test(files[0].type)) {
-	// 			var reader = new FileReader();
-	// 			reader.readAsDataURL(files[0]); 
-	// 			reader.onloadend = function() { 
-	// 				uploadFile.closest(".file-upload").find('.imagePreview img').attr("src" ,this.result);
-	// 				uploadFile.closest(".file-upload").find('.imagePreview').addClass('uplode');
-	// 			}
-	// 		}
-	// 	});
-	// });
-	</script>
 </head>
 <body>
 
@@ -148,11 +125,15 @@
 												<div class="file-upload">
 													<div class="file-select">
 														<div class="imagePreview">
-															<i class="fas fa-sharp fa-light fa-image"></i>
-															<img src="" alt="" >
+															<i class="fas fa-sharp fa-light fa-image"></i><!-- 이미지 등록하면 > display:none -->
+															<div class="file_thumbnail" style="display:none;"><!-- 이미지 등록하면 > display:block -->
+																<img src="../img/sample.jpg" alt="" style="max-width:300px;">
+															</div>
 														</div>
-														<div class="file-select-name"></div>
-														<div class="tc"><button type="button" class="btn_default bg_blue">등록</button></div>
+														<div class="file-select-name" style="display:none;">파일명.jpg</div><!-- 이미지 등록하면 > block -->
+														<div class="tc">
+															<button type="button" class="btn_default bg_blue">등록</button>
+														</div>
 														<input type="file" name="files[]" class="profileimg">
 													</div>
 												</div>
@@ -212,11 +193,15 @@
 												<div class="file-upload">
 													<div class="file-select">
 														<div class="imagePreview">
-															<i class="fas fa-sharp fa-light fa-image"></i>
+															<i class="fas fa-sharp fa-light fa-image"></i><!-- 이미지 등록하면 > display:none -->
+															<div class="file_thumbnail" style="display:none;"><!-- 이미지 등록하면 > display:block -->
+																<img src="../img/sample.jpg" alt="" style="max-width:300px;">
+															</div>
 														</div>
-													
-														<div class="file-select-name"></div>
-														<div class="tc"><button type="button" class="btn_default bg_blue">등록</button></div>
+														<div class="file-select-name" style="display:none;">파일명.jpg</div><!-- 이미지 등록하면 > block -->
+														<div class="tc">
+															<button type="button" class="btn_default bg_blue">등록</button>
+														</div>
 														<input type="file" name="files[]" class="profileimg">
 													</div>
 												</div>

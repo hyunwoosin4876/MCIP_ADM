@@ -273,8 +273,6 @@ button[class*='bg_'] {color:#fff;border:none;}
 .file_attach input[type="file"] {overflow: hidden;position: absolute;width:0;height:0;padding:0;border:0;}
 .file_attach .upload_name{display:inline-block;width:100%;height:32px;padding:2px 30px 2px 12px;color:#111;background:#FFF;border:1px solid #D4D4D4;box-sizing:border-box;}
 
-
-
 .btn_bbs{min-width:110px;}
 .btn_popup{min-width:80px;}
 
@@ -345,6 +343,7 @@ button[class*='bg_'] {color:#fff;border:none;}
 .upload-card .file-upload{position:relative;}
 .upload-card .file-select{overflow:hidden;position:relative}
 .upload-card .file-select input[type=file]{position:absolute;left:0;top:0;opacity:0;width:100%;height:100%}
+.upload-card .file-select-name{text-align:center;}
 .upload-card .imagePreview{display: flex;align-items: center;justify-content: center; width:100%;height:200px;margin:0 0 10px 0;text-align:center;background-color:#fff;border:1px solid #eee;}
 .upload-card .imagePreview img{max-height:100%;}
 .upload-card .imagePreview i{font-size:80px;color:#bdbdbd}
