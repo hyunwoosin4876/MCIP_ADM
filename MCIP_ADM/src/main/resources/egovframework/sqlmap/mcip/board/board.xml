@@ -19,9 +19,7 @@
 		SELECT A.BOARD_SEQ AS boardSeq  
 			, A.BOARD_TITLE AS boardTitle 
 			, A.BOARD_CONTENT AS boardContent
-			, A.BOARD_USE_YN AS boardUseYn
-			, A.COM_CODE_SEQ AS comCodeSeq
-			, A.COM_CODE AS comCode
+			, A.BOARD_DEL_YN AS boardUseYn
 			, A.REG_ID AS regId
 			, A.REG_DT AS regDt
 			, A.UPD_ID AS updId
@@ -31,7 +29,7 @@
 	
 	<!-- 상세 -->
 	<select id="getBoardDetail" parameterType="board" resultType="boardDTO">
-		/*fn : getBoardCnt, wr : 신현우, date: 2023.05.10*/
+		/*fn : 상세 - getBoardDetail, wr : 신현우*/
 		SELECT A.BOARD_SEQ AS boardSeq  
 			, A.BOARD_TITLE AS boardTitle 
 			, A.BOARD_CONTENT AS boardContent

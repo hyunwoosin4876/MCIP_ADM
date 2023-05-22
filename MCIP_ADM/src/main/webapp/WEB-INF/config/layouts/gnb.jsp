@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<div class="gnb">
+	<ul>
+		<li><a href="#">사이트관리</a></li>
+		<li><a href="#">사용자관리</a></li>
+		<li><a href="#">PCMS관리</a></li>
+		<li><a href="#">EMES 관리</a></li>
+		<li><a href="#">LMS(이동)</a></li>
+		<li><a href="#">LAI(이동)</a></li>
+	</ul>	
+</div>
